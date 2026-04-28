@@ -1,0 +1,30 @@
+{
+  "name": "unfold-agent-native-mvp",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "unfold": "./bin/unfold"
+  },
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:migrate:local": "wrangler d1 migrations apply unfold --local",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "cli": "tsx src/cli/index.ts"
+  },
+  "dependencies": {
+    "commander": "^12.1.0",
+    "yaml": "^2.8.1"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20260423.0",
+    "@types/node": "^24.9.1",
+    "sql.js": "^1.13.0",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.4",
+    "wrangler": "^4.45.0"
+  }
+}
